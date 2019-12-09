@@ -10,7 +10,7 @@ cities = ['chicago', 'new york city', 'washington']
 months = ['january', 'february', 'march', 'april', 'may', 'june',]
 days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',]
 filters = ['month', 'day', 'none', 'both']
-restarts = ['yes', 'no']
+checks = ['yes', 'no']
 
 city = 'none'
 month = 'all'
@@ -251,8 +251,29 @@ def main():
         df = load_data(city, month, day)
 
         time_stats(df)
+
+        station = input('Are you ready to see station stats? (yes or no)').lower()
+        while station != 'yes'
+            if station not in checks:
+                station = input('Please enter yes or no.\n').lower()
+            else:
+                station = input('Enter yes when ready')
         station_stats(df)
+
+        trip = input('Are you ready to see trip duration stats? (yes or no)')
+        while trip != 'yes'
+            if trip not in checks:
+                trip = input('Please enter yes or no.\n').lower()
+            else:
+                trip = input('Enter yes when ready')
         trip_duration_stats(df)
+
+        user = input('Are you ready to see user stats? (yes or no)')
+        while user != 'yes'
+            if user not in checks:
+                user = input('Please enter yes or no.\n').lower()
+            else:
+                user = input('Enter yes when ready')
         user_stats(df)
 
         n = 0
@@ -265,7 +286,7 @@ def main():
             raw_data = input('\nWould you like to see more? (yes or no)\n')
 
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
-        while restart not in retarts:
+        while restart not in checks:
             restart = input('Please enter yes or no.\n').lower()
         if restart != 'yes':
             break
