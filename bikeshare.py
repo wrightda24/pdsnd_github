@@ -27,7 +27,7 @@ def key_and_count(column):
 
 def get_month():
     '''
-    Gets the month the user would like to filter the data by
+    Gets the data for the month the user would like to filter the data by
     '''
     month = input('\nWhich month would you like to dive into? (January, February, March, April, May, or June)\n').lower()
     while month not in months:
@@ -38,7 +38,7 @@ def get_month():
 
 def get_day():
     '''
-    Gets the day of the week the user would like to filter the data by
+    Gets the data for the day of the week the user would like to filter the data by
     '''
     day = input('\nWhat day of the week would you like to know about?\n').lower()
     while day not in days:
@@ -50,7 +50,8 @@ def get_day():
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user what city they would like to analyze.
+    Asks user if they would like to filter by day and/or month then calls the corresponding filtering functions.
 
     Returns:
         (str) city - name of the city to analyze
