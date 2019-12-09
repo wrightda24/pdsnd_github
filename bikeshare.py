@@ -10,6 +10,7 @@ cities = ['chicago', 'new york city', 'washington']
 months = ['january', 'february', 'march', 'april', 'may', 'june',]
 days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',]
 filters = ['month', 'day', 'none', 'both']
+restarts = ['yes', 'no']
 
 city = 'none'
 month = 'all'
@@ -263,8 +264,10 @@ def main():
             m += 5
             raw_data = input('\nWould you like to see more? (yes or no)\n')
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
+        while restart not in retarts:
+            restart = input('Please enter yes or no.\n').lower()
+        if restart != 'yes':
             break
 
 
